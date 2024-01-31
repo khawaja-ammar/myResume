@@ -1,10 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 
@@ -24,10 +17,10 @@
 
 %----------FONT OPTIONS----------
 % sans-serif
-% \usepackage[sfdefault]{FiraSans}
+% \usepackagec{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -113,96 +106,112 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Ammar Khawaja} \\ \vspace{1pt}
-    \small {+923066691100} $|$
-    {mammarkh@gmail.com} $|$ 
-    \href{https://linkedin.com/in/khawajaammar97}{\underline{LinkedIn}} $|$
-    \href{https://github.com/khawaja-ammar}{\underline{Github}} $|$
-    \href{https://ammarkhawaja.pages.dev}{\underline{Portfolio}}
+	\textbf{\Huge \scshape Ammar Khawaja} \\ \vspace{1pt}
+	\small {+923066691100} $|$
+	{mammarkh@gmail.com} $|$
+	\href{https://linkedin.com/in/khawajaammar97}{\underline{LinkedIn}} $|$
+	\href{https://github.com/khawaja-ammar}{\underline{Github}} $|$
+	\href{https://ammarkhawaja.pages.dev}{\underline{Portfolio}}
 
 \end{center}
 
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {LUMS}{Lahore, PK}
-      {B.S Computer Science; GPA: 3.28}{2016 -- 2020}
- 	\vspace{0pt}
+\resumeSubHeadingListStart
+\resumeSubheading
+{LUMS}{Lahore, PK}
+{B.S Computer Science; GPA: 3.28}{2016 -- 2020} \vspace{4pt}
+\vspace{0pt}
 
-	\noindent{Relevant Courses:} 
-	\noindent{Distributed Systems, Software Engineering, Advanced Programming, HCI (UI/UX), Data Structures, Algorithms, Network-Centric Programming, Network Security}
-
-
-  \resumeSubHeadingListEnd
+\noindent{Relevant Courses:}
+\noindent{Distributed Systems, Software Engineering, Advanced Programming, HCI (UI/UX), Data Structures, Algorithms, Network-Centric Programming, Network Security}
+\resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
+\resumeSubheading
+{CTO, Fullstack Software Engineer}{Oct 2023 -- Current}
+{Firebird Technologies Pte. Ltd.}{}
 
-    \resumeSubheading
-      {Fullstack Software Engineer (Javascript)}{Sep 2020 -- July 2023}
-      {Quality Group}{}
-      \resumeItemListStart
-        \resumeItem{Part of the core team responsible for engineering and developing the express.js (node.js) server meant to replace the legacy Oracle server for management and planning of the company's internal operations}
-        \resumeItem{Developed the system in modules ensuring the original SQL database and new REST API calls work as intended, including making most of the controllers and models in node.js}
-        \resumeItem{Remodeled the schema of the SQL DB to 3NF and updated the queries in the codebase resulting in up to 1.5X performance boost}
-        \resumeItem{Designed standardized UI/UX using React for system's frontend after extensive Usability testing}
-        \resumeItem{Designed tests for Frontend, API calls and DB using Jest.js}
+% (Typescript, React, Next.js, express.js, postgres)
+% ci/cd using gh actions on ec2
+% psql on rds
+% nextjs fe + domains on cloudflare
+% fulltext search using psql
+% postgis for geo spatial queries mapped to google mapns on fe
+% API integration with online travel agencies like Travelbeds and trip.com
+\resumeItemListStart
+\resumeItem{\textbf{Developed the entire architecture} for a meta search engine startup in hotel travel industry, currently operating in a Sandbox testing stage}
+\resumeItem{Architected the entire frontend in \textbf{Next.js} (React.js) making use of server-side rendering, CDNs and S3 storage buckets for static content (i.e blogs, images) and of \textbf{serverless functions} for querying the Backend in a scalable and economical way}
+\resumeItem{Developed \textbf{express API server} in typescript for querying \textbf{AWS RDS postgres} database; for secure access deployed in same security group on \textbf{AWS EC2} by containerizing using \textbf{Docker} and using Github Actions for \textbf{CI/CD}}
+\resumeItem{Designed Postgres \textbf{schema and indexes} alongside \textbf{performant and atomic} queries for system resilience and reliability}
+\resumeItem{Used PostGIS for \textbf{geo-spatial queries} alongside \textbf{R-Trees} for indexing spatial information}
+\resumeItemListEnd
 
+\resumeSubheading
+{Fullstack Software Engineer}{Sep 2020 -- Sep 2023} % Sep 2020 - July 2023
+{Quality Group}{}
+%  (Javascript: React, express)
+\resumeItemListStart
+\resumeItem{Part of the core team responsible for engineering and developing the express.js (node.js) server meant to replace the legacy Oracle server for management and planning of the company's internal operations}
+\resumeItem{Developed the system in modules ensuring the original SQL database and new REST API calls work as intended, including making most of the controllers and models in node.js}
+\resumeItem{Remodeled the schema to 3NF and updated the queries in the codebase resulting in up to 1.5X performance boost}
+\resumeItem{Designed standardized UI/UX using React for system's frontend after extensive Usability testing}
+\resumeItem{Designed tests for Frontend, API calls and DB using Jest.js}
+\resumeItemListEnd
 
-      \resumeItemListEnd
+\resumeSubheading
+{Computer Science Teaching Assistant}{Aug 2018 -- Dec 2019}
+{LUMS University}{}
+\resumeItemListStart
+\resumeItem{Engineered CMS website for university society using \textbf{MERN} stack for event planning and management}
+\resumeItem{Taught beginner and intermediate level CS courses to students in C++}
+\resumeItem{Conducted Labs, tests and office hours}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Computer Science Teaching Assistant}{Aug 2018 -- Dec 2019}
-      {LUMS University}{}
-      \resumeItemListStart
-        \resumeItem{Engineered CMS website for university society using MERN stack for event planning and management}
-        \resumeItem{Taught beginner and intermediate level CS courses to students in C++}
-        \resumeItem{Conducted Labs, tests and office hours}
-    \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-      \resumeProjectHeading
-          {\textbf{Chatting App} $|$ \emph{MERN Stack, Socket.IO, JWT Auth, REST API}}{Mar 2023 -- June 2023}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using express.js serving REST APIs with React and tailwindcss + daisyUI as the frontend}
-            \resumeItem{Authorization and authentication done using JSON web tokens (JWT) for secure sessions}
-            \resumeItem{Implemented Real-time communication between clients using Socket.IO}
-            \resumeItem{Client information and messages stored in MongoDB instance for faster reads}
-          \resumeItemListEnd
-          
-      \resumeProjectHeading
-          {\textbf{Peer-to-peer file sharing} $|$ \emph{Python, sockets}}{Dec 2019 -- Mar 2020}
-          \resumeItemListStart
-            \resumeItem{Engineered a Chord-like p2p node for sharing files with other nodes on request}
-            \resumeItem{Implemented Finger tables for O(log N) lookup time}
-            \resumeItem{``Stabilization" stage and file redundancy implemented to minimize risk of file loss}
-          \resumeItemListEnd
-          
-    \resumeSubHeadingListEnd
+\resumeProjectHeading
+{\textbf{Chatting App} $|$ \emph{MERN Stack, Socket.IO, JWT Auth, REST API}}{Mar 2023 -- June 2023}
+\resumeItemListStart
+\resumeItem{Developed a full-stack web application using express.js serving REST APIs with React and tailwindcss + daisyUI as the frontend}
+\resumeItem{Authorization and authentication done using JSON web tokens (JWT) for secure sessions}
+\resumeItem{Implemented Real-time communication between clients using Socket.IO}
+\resumeItem{Client information and messages stored in MongoDB instance for faster reads}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Peer-to-peer file sharing} $|$ \emph{Python, sockets}}{Dec 2019 -- Mar 2020}
+\resumeItemListStart
+\resumeItem{Engineered a Chord-like p2p node for sharing files with other nodes on request}
+\resumeItem{Implemented Finger tables for O(log N) lookup time}
+\resumeItem{``Stabilization" stage and file redundancy implemented to minimize risk of file loss}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 
 
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Javascript/Typescript, Python, Golang, C/C++, SQL (Postgres/MySQL), HTML/CSS } \\
-     \textbf{Frameworks}{: React.js, Node.js, Django, Express.js, Next.js,  Astro} \\
-     \textbf{Developer Tools}{: Git, Linux, SSH, VS Code, Lighthouse} \\
-     \textbf{Libraries}{: Websockets, JWT}
-    }}
- \end{itemize}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+	      \textbf{Languages}{: Javascript/Typescript, Python, Golang, C/C++, SQL (Postgres/MySQL), HTML/CSS } \\
+	      \textbf{Frameworks}{: React.js, Node.js, Express.js, Next.js, Astro} \\
+	      \textbf{Dev Tools}{: Git, Linux, SSH, vim/neovim, vs code } \\
+	      \textbf{Testing}{: Lighthouse, Jest.js} \\
+	      \textbf{DevOps}{: Docker, Github Actions, AWS, Cloudflare}
+	      }}
+\end{itemize}
 
 
 %-------------------------------------------
